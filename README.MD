@@ -15,10 +15,32 @@ My goal is to create a virtual space for users to just "Zen Out".
 https://zenquotes.io/
 
 ## ERD's
-
+![ERD](./media/ERD.png)
 ## Restful Routing Charts
 
-## Wireframes of all user views
+## Techstack
+
+* Node
+* Axios
+* Postgresql
+* Sequelize
+* Express
+* Javascript
+* CSS
+* HTML
+* Bcrypt
+* Cookie-Parser
+* Crypto-JS
+* Dotenv
+* EJS
+* Express-ejs-layouts
+
+
+## Wireframes
+![Wireframe 1](./media/Wireframe1.png)
+![Wireframe 2](./media/Wireframe2.png)
+![Wireframe 3](./media/Wireframe3.png)
+![Wireframe 4](./media/Wireframe4.png)
 
 ## User Stories
 
