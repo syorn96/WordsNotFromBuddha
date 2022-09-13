@@ -98,6 +98,7 @@ https://zenquotes.io/
 
 ## Stretchgoals
 * Audios for each specific page.
+* Add and display username
 
 ## Potential Roadblocks
 * Associating mutliple models

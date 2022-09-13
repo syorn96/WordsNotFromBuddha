@@ -58,5 +58,5 @@ app.use('/users', require('./controllers/users'))
 
 // listen on port
 app.listen(PORT,() => {
-    console.log(`Listening to project creativity on Port: ${PORT}`)
+    console.log(`Listening to sounds of the Himalayas on Port: ${PORT}`)
 })
