@@ -5,6 +5,8 @@ const ejsLayouts = require('express-ejs-layouts')
 const cookieParser = require('cookie-parser')
 const db = require('./models')
 const crypto = require('crypto-js')
+const axios = require('axios')
+
 
 // config express/app
 const app = express()
@@ -43,7 +45,12 @@ app.get('/', (req,res) => {
     // console.log('incoming cookie 🍪', req.cookies)
     // console.log(res.locals.myData)
     console.log('the currently logged in user is:', res.locals.user)
-    res.render('home.ejs')
+    axios.get(`https://zenquotes.io/api/quotes`)
+    .then(response => {
+        console.log(response)
+        res.render('home.ejs', { quotes: response.data })
+    })
+    
 })
 
 // controllers

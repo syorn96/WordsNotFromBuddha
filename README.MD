@@ -2,7 +2,9 @@
 
 ## Project Idea and Description
 
-Words have the power to create or break a person's reality. Words Not From Buddha is inspired by moments of clarity that I've experienced through reading meaningful words strung together. This online application will generate random quotes from ZenQuotes API (often related to inspiration, motivation, or life truths) in order to stimulate the user's ability to meditate, reflect or create intentions. My goal is to create a virtual space for users to just "Zen Out".
+Words have the power to create or break a person's reality. 
+Words Not From Buddha is inspired by moments of clarity that I've experienced through reading meaningful words strung together. This online application will generate random quotes from ZenQuotes API (often related to inspiration, motivation, or life truths) in order to stimulate the user's ability to meditate, reflect or create intentions. 
+My goal is to create a virtual space for users to just "Zen Out".
 
 * Meditation - Users will scroll through a list of random generated quotes and add it to their account.
 * Reflection - Users can add reflections to their saved quotes.
