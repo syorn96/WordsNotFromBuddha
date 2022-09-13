@@ -1,6 +1,28 @@
 USER model
 -----------
-email:VARCHAR 255 (string)
-password: VARCHAR 255 (string)
+email: STRING
+password: STRING
+username: STRING
 
-sequelize model:create --name user --attributes email:string,password:string
+sequelize model:create --name user --attributes email:string,password:string,username:string
+
+QUOTE model
+------------
+content: TEXT
+author: STRING
+
+sequelize model:create --name quote --attributes content:text,author:string
+
+USER_QUOTES model
+------------------
+userId: INTEGER
+quoteId: INTEGER
+
+sequelize model:create --name user_quotes --attributes userId:integer,quoteId:integer
+
+REFLECTION model
+-----------------
+content: TEXT
+quoteId: INTEGER
+userId: INTEGER
+sequelize model:create --name reflection --attributes content:text,quoteId:integer,userId:integer

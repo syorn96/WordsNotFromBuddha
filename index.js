@@ -45,17 +45,14 @@ app.get('/', (req,res) => {
     // console.log('incoming cookie 🍪', req.cookies)
     // console.log(res.locals.myData)
     console.log('the currently logged in user is:', res.locals.user)
-    axios.get(`https://zenquotes.io/api/quotes`)
-    .then(response => {
-        console.log(response)
-        res.render('home.ejs', { quotes: response.data })
-    })
-    
+    res.render('home.ejs')
 })
 
 // controllers
 app.use('/users', require('./controllers/users'))
-
+app.use('/users/meditate', require('./controllers/meditate'))
+app.use('/users/reflect', require('./controllers/reflect'))
+app.use('/users/intention', require('./controllers/intention'))
 // listen on port
 app.listen(PORT,() => {
     console.log(`Listening to sounds of the Himalayas on Port: ${PORT}`)

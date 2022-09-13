@@ -1,0 +1,15 @@
+<% quotes.forEach((quote, index) => { %>
+    <div>
+        <h3><%=quote.q%></h3>
+        <p><%=quote.a%></p>
+        <div>
+            <form method="POST" action="/users/meditate">
+                <input hidden type="text" name="content" value="<%=quote.q%>" required>
+                <input hidden type="text" name="author" value="<%=quote.a%>" required>
+                <button id="<%=quote[index]%>" type="submit">Add quote to Reflect</button>
+            </form>
+        </div>
+        <hr>
+    </div>
+<%})%>
+

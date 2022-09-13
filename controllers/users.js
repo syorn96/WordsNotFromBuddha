@@ -17,7 +17,8 @@ router.post('/', async (req,res)=> {
         const hashedPassword = bcrypt.hashSync(req.body.password, 12)
         const [newUser, created] = await db.user.findOrCreate({
             where: {
-                email: req.body.email
+                email: req.body.email,
+                username: req.body.username
             },
             defaults: {
                 password: hashedPassword
