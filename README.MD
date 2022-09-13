@@ -51,24 +51,27 @@ https://zenquotes.io/
 | DELETE | /users/:id/reflect/:id | Delete reflection |
 
 #### Intention
+| Method | Action | Description |
+|:------:|:------:|:-----------:|
 | GET    | /users/:id/intention/:id | Display a single quote with no reflection|
 
 ## Techstack
 
+* Javascript
+* CSS
+* HTML
 * Node
 * Axios
 * Postgresql
 * Sequelize
 * Express
-* Javascript
-* CSS
-* HTML
 * Bcrypt
 * Cookie-Parser
 * Crypto-JS
 * Dotenv
 * EJS
-* Express-ejs-layouts
+* Express-EJS-Layouts
+* Method-Override
 
 
 ## Wireframes
@@ -81,7 +84,8 @@ https://zenquotes.io/
 
 * As a user, I want to create an account, login and logout.
 * As a user, I want to view quotes and add it to my account.
-* As a user, I want to view the quotes I saved and add reflections.
+* As a user, I want to view and delete the quotes I saved.
+* As a user, I want to create, edit and delete reflections for each quote.
 * As a user, I want to view a single quote and display it on a virtual vision board.
 
 ## MVP
@@ -94,3 +98,7 @@ https://zenquotes.io/
 
 ## Stretchgoals
 * Audios for each specific page.
+
+## Potential Roadblocks
+* Associating mutliple models
+* CSS
