@@ -13,10 +13,44 @@ My goal is to create a virtual space for users to just "Zen Out".
 ## API
 
 https://zenquotes.io/
+![ZenQuotes](./media/APIProof2.png)
+![ZenQuotes2](./media/Apiproof.png)
 
 ## ERD's
 ![ERD](./media/ERD.png)
+
+
 ## Restful Routing Charts
+
+#### User
+
+| Method | Action | Description |
+|:------:|:------:|:-----------:|
+| POST   | /users | Create new user |
+| GET    | /users/new | Render form for creating new User |
+| PUT    | /users/:id | Edit User |
+| DELETE | /users/:id | Delete User |
+
+#### Meditate
+| Method | Action | Description |
+|:------:|:------:|:-----------:|
+| GET    | /users/:id/meditate | Show 50 random quotes |
+| POST   | /users/:id/meditate | Add quotes to user's reflect page |
+
+#### Reflect
+| Method | Action | Description |
+|:------:|:------:|:-----------:|
+| GET    | /users/:id/reflect | Show all quotes with reflections |
+| GET    | /users/:id/reflect/:id/new | Render form to create a reflection for a quote |
+| POST   | /users/:id/reflect/:id/new | Create a reflection for a quote |
+| GET    | /users/:id/reflect/:id | Show a single quote with reflection |
+| DELETE | /users/:id/reflect | Delete quote from reflection page |
+| GET    | /users/:id/reflect/:id/edit | Show form to edit reflection |
+| PUT    | /users/:id/reflect/:id/edit | Edit reflection |
+| DELETE | /users/:id/reflect/:id | Delete reflection |
+
+#### Intention
+| GET    | /users/:id/intention/:id | Display a single quote with no reflection|
 
 ## Techstack
 
@@ -50,5 +84,12 @@ https://zenquotes.io/
 * As a user, I want to view a single quote and display it on a virtual vision board.
 
 ## MVP
+* A display for all quotes (meditate)
+* A display for all saved quotes (reflect)
+* A display for a single quote (intention)
+* Functioning routes
+* Functioning forms to create, delete, or update reflections per quote.
+* Functioning forms to delete or add quotes to reflect page.
 
 ## Stretchgoals
+* Audios for each specific page.
