@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       models.user.belongsToMany(models.quote, {through: "user_quotes"})
+      models.user.hasMany(models.reflection)
     }
   }
   user.init({

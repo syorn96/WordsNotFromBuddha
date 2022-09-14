@@ -9,20 +9,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"/>
     
 </head>
-<body style="background-image: url(../media/14.jpeg)">
+<body id="background">
     <nav>
         <ul>
             <!-- if the user is logged in.. -->
             <% if (user) { %>
-                <li class="col">
+                
                     <a href="/users/profile">Profile</a>
-                </li>
-                <li class="col">
+                
+                
                     <a href="/users/logout">Logout</a>
-                </li>
-                <li class="col">
+                
+                
                     <a href="/">Homepage</a>
-                </li>
+                
             <div class="row" id="center">
                 <div class="col">
                     <a href="/users/meditate">Meditate</a>
@@ -46,9 +46,11 @@
             
         </ul>
     </nav>
+    <div id="center">
     <h1>Words Not From Buddha</h1>
     
     <%- body %>
+    </div>
     <footer>
         <p>Inspirational quotes provided by</p>
         <a href="https://zenquotes.io/" target="_blank">ZenQuotes API</a>
