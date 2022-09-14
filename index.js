@@ -5,7 +5,6 @@ const ejsLayouts = require('express-ejs-layouts')
 const cookieParser = require('cookie-parser')
 const db = require('./models')
 const crypto = require('crypto-js')
-const axios = require('axios')
 
 
 // config express/app
@@ -15,6 +14,9 @@ app.set('view engine', 'ejs')
 app.use(ejsLayouts)
 app.use(express.urlencoded({ extended:false }))
 app.use(cookieParser())
+app.use(express.static('public'))
+app.use('/public', express.static('public'));
+
 
 //our custom auth middleware
 app.use(async (req, res, next)=> {
