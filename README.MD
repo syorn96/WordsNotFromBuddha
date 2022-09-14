@@ -29,8 +29,8 @@ https://zenquotes.io/
 |:------:|:------:|:-----------:|
 | POST   | /users | Create new user |
 | GET    | /users/new | Render form for creating new User |
-| PUT    | /users/:id | Edit User |
-| DELETE | /users/:id | Delete User |
+| PUT    | /users/profile | Edit User |
+| DELETE | /users/profile | Delete User |
 
 #### Meditate
 | Method | Action | Description |
@@ -42,17 +42,17 @@ https://zenquotes.io/
 | Method | Action | Description |
 |:------:|:------:|:-----------:|
 | GET    | /users/:id/reflect | Show all quotes with reflections |
-| GET    | /users/:id/reflect/:id/new | Render form to create a reflection for a quote |
-| POST   | /users/:id/reflect/:id/new | Create a reflection for a quote |
-| GET    | /users/:id/reflect/:id | Show a single quote with reflection |
+| GET    | /users/:id/reflect/:id | Render form to create a reflection for a quote |
+| POST   | /users/:id/reflect/:id | Create a reflection for a quote |
+| GET    | /users/:id/reflect/:id | Show a single quote with reflection(s) |
 | DELETE | /users/:id/reflect | Delete quote from reflection page |
-| GET    | /users/:id/reflect/:id/edit | Show form to edit reflection |
-| PUT    | /users/:id/reflect/:id/edit | Edit reflection |
-| DELETE | /users/:id/reflect/:id | Delete reflection |
+| GET    | /users/:id/reflect/edit/:id | Show form to edit reflection |
+| PUT    | /users/:id/reflect/edit/:id | Edit reflection |
 
 #### Intention
 | Method | Action | Description |
 |:------:|:------:|:-----------:|
+| GET    | /users/:id/intention/ | Display list of saved quotes with no reflection
 | GET    | /users/:id/intention/:id | Display a single quote with no reflection|
 
 ## Techstack

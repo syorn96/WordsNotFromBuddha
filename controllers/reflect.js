@@ -8,10 +8,17 @@ router.get('/', async (req,res)=> {
             where: {
                 email: res.locals.user.email
             },
+            include: [{
+                model: db.reflection}]
         })
         const savedQuotes = await user.getQuotes()
-        console.log(savedQuotes)
-        res.render('reflect/show.ejs', {quotes: savedQuotes})
+        const savedReflections = await user.getReflections()
+        // res.send(savedReflections)
+        // console.log(savedQuotes)
+        res.render('reflect/show.ejs', {
+            quotes: savedQuotes,
+            reflections: savedReflections
+        })
     }catch(err) {
         console.log(err)
     }
@@ -56,6 +63,20 @@ router.post('/:id', async (req,res)=>{
                 userId: req.body.userId
             })
         res.redirect('/users/reflect')
+    }catch(err){
+        console.log(err)
+    }
+})
+
+router.get('/edit/:id', async (req,res) => {
+    try{
+        const oneReflection = await db.reflection.findOne({
+            where: {
+                id: req.params.id
+            }
+        })
+        // res.send(oneReflection)
+        res.render('reflect/edit.ejs', {reflection: oneReflection})
     }catch(err){
         console.log(err)
     }
