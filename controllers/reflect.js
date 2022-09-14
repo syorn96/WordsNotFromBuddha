@@ -24,6 +24,20 @@ router.get('/', async (req,res)=> {
     }
 })
 
+router.put('/edit/:id', async (req,res) => {
+    console.log(req.body)
+    try {
+        const editReflection = await db.reflection.update({
+            content: req.body.content
+        }, {
+            where: { id: req.params.id }
+        })
+        
+        res.redirect('/reflect')
+    }catch(err){
+        console.log(err)
+    }
+})
 router.get('/:id', async (req,res)=> {
     console.log(req.params.id)
     try{
@@ -70,13 +84,15 @@ router.post('/:id', async (req,res)=>{
 
 router.get('/edit/:id', async (req,res) => {
     try{
-        const oneReflection = await db.reflection.findOne({
+        const reflection = await db.reflection.findOne({
             where: {
                 id: req.params.id
-            }
+            },
+            include: [db.quote]
         })
-        // res.send(oneReflection)
-        res.render('reflect/edit.ejs', {reflection: oneReflection})
+        res.render('reflect/edit.ejs', {
+            reflection: reflection
+        })
     }catch(err){
         console.log(err)
     }

@@ -5,7 +5,7 @@ const ejsLayouts = require('express-ejs-layouts')
 const cookieParser = require('cookie-parser')
 const db = require('./models')
 const crypto = require('crypto-js')
-
+const methodOverride = require('method-override')
 
 // config express/app
 const app = express()
@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended:false }))
 app.use(cookieParser())
 app.use(express.static('public'))
 app.use('/public', express.static('public'));
+app.use(methodOverride("_method"));
 
 
 //our custom auth middleware
