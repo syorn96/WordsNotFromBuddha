@@ -2,10 +2,14 @@
     <div>
         <h3><%=quote.content%></h3>
         <p><%=quote.author%></p>
+        <form method="POST" action="/users/reflect/<%=quote.id%>/?_method=DELETE">
+            <input type="submit" value="delete">
+        </form>
         <h4>Reflection</h4>
         <% reflections.filter(reflection => { %>
             <% if(reflection.quoteId == quote.id){ %>
-                <p><%=reflection.content%></p> <a href="/users/reflect/edit/<%=reflection.id%>">edit</a>
+                <p><%=reflection.content%></p> 
+                <a href="/users/reflect/edit/<%=reflection.id%>">edit</a>
         <%}})%>
         <a href="/users/reflect/<%=quote.id%>">Add Reflection</a>
     </div>

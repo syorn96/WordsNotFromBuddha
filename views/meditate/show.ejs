@@ -1,6 +1,8 @@
+<h3> Scroll through quotes and add them if they resonate with you. </h3>
+
 <% quotes.forEach((quote, index) => { %>
     <div>
-        <h3><%=quote.q%></h3>
+        <h5><%=quote.q%></h5>
         <p><%=quote.a%></p>
         <div>
             <form method="POST" action="/users/meditate">
