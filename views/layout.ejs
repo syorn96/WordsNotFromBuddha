@@ -7,7 +7,7 @@
     <title>Words Not From Buddha</title>
     <link rel="stylesheet" href="../public/style.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"/>
-    
+    <script src="../public/script.js" defer></script>
 </head>
 <body id="background">
     <nav>
@@ -24,7 +24,7 @@
                     <a href="/">Homepage</a>
                 
             <div class="row" id="center">
-                <div class="col">
+                <!-- <div class="col">
                     <a href="/users/meditate">Meditate</a>
                 </div>
                 <div class="col">
@@ -32,7 +32,7 @@
                 </div>
                 <div class="col">
                     <a href="/users/intention">Intention</a>
-                </div>
+                </div> -->
             <% } else { %>
                 <div class="col">
                     <a href="/users/new">Sign Up</a>
@@ -47,7 +47,7 @@
         </ul>
     </nav>
     <div id="center">
-    <h1>Words Not From Buddha</h1>
+    <img id="header" src="../public/media/WNFB.png"/>
     
     <%- body %>
     </div>
