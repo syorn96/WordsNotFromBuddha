@@ -28,16 +28,27 @@ router.put('/edit/:id', async (req,res) => {
     console.log(req.body)
     try {
         const editReflection = await db.reflection.update({
-            content: req.body.content
+            content: req.body.content,
         }, {
             where: { id: req.params.id }
         })
-        
-        res.redirect('/reflect')
+        res.redirect('/users/reflect')
     }catch(err){
         console.log(err)
     }
 })
+
+router.delete('/edit/:id', async (req,res)=> {
+    try{
+        const numRowsDeleted = await db.reflection.destroy({
+            where: {id: req.params.id }
+        })
+        res.redirect(`/users/reflect`)
+    }catch(err){
+        console.log(err)
+    }
+})
+
 router.get('/:id', async (req,res)=> {
     console.log(req.params.id)
     try{

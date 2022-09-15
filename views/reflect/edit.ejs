@@ -1,8 +1,13 @@
 <h3><%=reflection.quote.content%></h3>
 <p><%=reflection.content%></p>
 
-<form method="POST" action="/reflect/edit/<%=reflection.id%>/?_method=PUT">
+<form method="POST" action="/users/reflect/edit/<%=reflection.id%>/?_method=PUT">
     <label for="content">Edit Reflection:</label>
     <input type="text" id="content" name="content" value="<%=reflection.content%>" required>
     <button type="submit">submit</button>
+</form>
+
+<form method="POST" action="/users/reflect/edit/<%=reflection.id%>/?_method=DELETE">
+
+    <input type="submit" value="delete">
 </form>
