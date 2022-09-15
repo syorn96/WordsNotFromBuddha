@@ -17,7 +17,16 @@ router.get('/', async (req,res)=> {
     }
 })
 
-router.get('/:id',(req,res)=> {
-    res.send('Display a single quote on a digital visual board.')
+router.get('/:id', async (req,res)=> {
+    try{
+        const oneQuote = await db.quote.findOne({
+            where: {
+                id: req.params.id
+            }
+        })
+        res.render('intention/detail.ejs', {aQuote: oneQuote})
+    }catch(err){
+        console.log(err)
+    }
 })
 module.exports = router
