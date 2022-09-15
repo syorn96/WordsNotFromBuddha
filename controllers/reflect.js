@@ -26,8 +26,20 @@ router.get('/', async (req,res)=> {
 
 router.delete('/:id', async (req,res)=> {
     try{
+        const user = await db.user.findOne({
+            where: {email: res.locals.user.email}
+        })
         const deleteQuote = await db.quote.destroy({
-            where: {id: req.params.id}
+            where: { id: req.params.id }
+        })
+        const deleteReflection = await db.reflection.destroy({
+            where: { quoteId: req.params.id }
+        })
+        const deleteUserQuote = await db.user_quotes.destroy({
+            where: {
+                userId: user.id,
+                quoteId: req.params.id
+            }
         })
         res.redirect('/users/reflect')
     }catch(err){

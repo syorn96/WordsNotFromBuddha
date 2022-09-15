@@ -24,7 +24,7 @@ router.get('/:id', async (req,res)=> {
                 id: req.params.id
             }
         })
-        res.render('intention/detail.ejs', {aQuote: oneQuote})
+        res.render('intention/visionboard.ejs', {aQuote: oneQuote})
     }catch(err){
         console.log(err)
     }
