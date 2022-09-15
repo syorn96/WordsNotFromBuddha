@@ -50,7 +50,9 @@ app.get('/', (req,res) => {
     console.log('the currently logged in user is:', res.locals.user)
     res.render('home.ejs')
 })
-
+app.get('/about', (req,res)=> {
+    res.render('about.ejs')
+})
 // controllers
 app.use('/users', require('./controllers/users'))
 app.use('/users/meditate', require('./controllers/meditate'))

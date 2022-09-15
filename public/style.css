@@ -15,8 +15,12 @@
     margin: none;
 }
 
-#box {
+.boxy {
     width: 50vw;
     height: 50vh;
     text-align: center;
+}
+
+#homepage {
+    border-radius: 50px;
 }

@@ -1,6 +1,6 @@
-let button = document.querySelectorAll('.clickme')
+let buttons = document.querySelectorAll('.clickme')
 
-button.forEach(e => {
+buttons.forEach(e => {
     e.addEventListener('click', ()=> {
         e.parentElement.setAttribute('style', 'display:none;')
     })
