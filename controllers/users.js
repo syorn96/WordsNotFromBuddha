@@ -3,7 +3,10 @@ const router = express.Router()
 const db = require('../models')
 const crypto = require('crypto-js')
 const bcrypt = require('bcrypt')
-
+const axios = require('axios')
+const determineSign = require('../public/script')
+const { response } = require('express')
+let sign = null
 // GET /users/new -- render a form to create a new user
 router.get('/new', (req,res) => {
     res.render('users/new.ejs')
@@ -18,7 +21,9 @@ router.post('/', async (req,res)=> {
         const [newUser, created] = await db.user.findOrCreate({
             where: {
                 email: req.body.email,
-                username: req.body.username
+                username: req.body.username,
+                birthMonth: req.body.month,
+                birthDay: req.body.day
             },
             defaults: {
                 password: hashedPassword
@@ -97,9 +102,23 @@ router.get('/profile', (req,res)=> {
         res.redirect('/users/login?message=You must authenticate before you are authorized to view this resource.')
         // otherwise, show them their profile
     } else {
-        res.render('users/profile.ejs', {
-            user: res.locals.user
+        let month = res.locals.user.birthMonth
+        let day = res.locals.user.birthDay
+        let sign = determineSign()
+        // res.send(`${month} + ${sign} + ${day}`)
+
+        const URL = `https://aztro.sameerkumar.website/?sign=${sign}&day=today`
+        axios.post(URL)
+        .then((response) => {
+            horoscope = response.data
+            // res.send(response.data)
+            res.render('users/profile.ejs', {
+                user: res.locals.user,
+                horoscope: response.data,
+                sign: sign
+            })
         })
+        
     }
 })
 

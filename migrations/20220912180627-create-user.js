@@ -17,6 +17,12 @@ module.exports = {
       username: {
         type: Sequelize.STRING
       },
+      birthMonth: {
+        type: Sequelize.INTEGER
+      },
+      birthDay: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
