@@ -2,13 +2,13 @@
 
 <% quotes.forEach((quote, index) => { %>
     <div>
-        <h5><%=quote.q%></h5>
-        <p><%=quote.a%></p>
+        <h5>"<%=quote.q%>"</h5>
+        <p style="font-family: Arial, Helvetica, sans-serif; font-weight: bold;"><%=quote.a%></p>
         <div>
             <form method="POST" action="/users/meditate">
                 <input hidden type="text" name="content" value="<%=quote.q%>" required>
                 <input hidden type="text" name="author" value="<%=quote.a%>" required>
-                <button class="clickme" type="submit">Add quote to Reflect</button>
+                <button class="clickme, btn, btn-secondary" type="submit">Add quote to Reflect</button>
             </form>
         </div>
         <hr>

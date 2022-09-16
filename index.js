@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser')
 const db = require('./models')
 const crypto = require('crypto-js')
 const methodOverride = require('method-override')
-
+const path = require('path')
 // config express/app
 const app = express()
 const PORT = process.env.PORT || 3000
@@ -14,8 +14,12 @@ app.set('view engine', 'ejs')
 app.use(ejsLayouts)
 app.use(express.urlencoded({ extended:false }))
 app.use(cookieParser())
-app.use(express.static('public'))
+// app.use(express.static('public'))
 app.use('/public', express.static('public'));
+app.use('/users', express.static('users'))
+app.use(express.static(path.join(__dirname, 'static')));
+// app.use('/users/users', express.static('users'))
+
 app.use(methodOverride("_method"));
 
 
@@ -54,10 +58,11 @@ app.get('/about', (req,res)=> {
     res.render('about.ejs')
 })
 // controllers
+app.use('/users/intention', require('./controllers/intention'))
 app.use('/users', require('./controllers/users'))
 app.use('/users/meditate', require('./controllers/meditate'))
 app.use('/users/reflect', require('./controllers/reflect'))
-app.use('/users/intention', require('./controllers/intention'))
+
 // listen on port
 app.listen(PORT,() => {
     console.log(`Listening to sounds of the Himalayas on Port: ${PORT}`)

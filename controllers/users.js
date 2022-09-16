@@ -96,28 +96,38 @@ router.get('/logout', (req,res)=> {
     res.redirect('/')
 })
 
-router.get('/profile', (req,res)=> {
+router.get('/profile', async (req,res)=> {
     // if the user is not logged ... we need to redirect to the login form
     if(!res.locals.user) {
         res.redirect('/users/login?message=You must authenticate before you are authorized to view this resource.')
         // otherwise, show them their profile
     } else {
-        let month = res.locals.user.birthMonth
-        let day = res.locals.user.birthDay
-        let sign = determineSign()
-        // res.send(`${month} + ${sign} + ${day}`)
-
-        const URL = `https://aztro.sameerkumar.website/?sign=${sign}&day=today`
-        axios.post(URL)
-        .then((response) => {
-            horoscope = response.data
-            // res.send(response.data)
-            res.render('users/profile.ejs', {
-                user: res.locals.user,
-                horoscope: response.data,
-                sign: sign
+        try {
+            const user = await db.user.findOne({
+                where: {
+                    email: res.locals.user.email
+                }
             })
-        })
+            let month = user.birthMonth
+            let day = user.birthDay
+            let sign = determineSign(month, day)
+            // res.send(`${month} + ${sign} + ${day}`)
+    
+            const URL = `https://aztro.sameerkumar.website/?sign=${sign}&day=today`
+            axios.post(URL)
+            .then((response) => {
+                horoscope = response.data
+                // res.send(response.data)
+                res.render('users/profile.ejs', {
+                    user: res.locals.user,
+                    horoscope: response.data,
+                    sign: sign
+                })
+            })
+
+        }catch(err) {
+            console.log(err)
+        }
         
     }
 })
