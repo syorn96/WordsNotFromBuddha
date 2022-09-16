@@ -4,15 +4,13 @@
 
 Words have the power to create or break a person's reality. 
 Words Not From Buddha is inspired by moments of clarity that I've experienced through reading meaningful words strung together. This online application will generate random quotes from ZenQuotes API (often related to inspiration, motivation, or life truths) in order to stimulate the user's ability to meditate, reflect or create intentions. Users that sign up will also receive a FREE daily horoscope through Aztro API.
-
 My goal is to create a virtual space for users to just "Zen Out".
 
 Special thanks to my dear friend, Sean Agcaoili.
-
 This web application is a tribute to our friendship and the moments where we would light incense, meditate and reflect on our lives.
-
+WNFB will allow users to:
 * Meditate - Users will scroll through a list of random generated quotes and add it to their account.
-* Reflect - Users can add reflections to their saved quotes.
+* Reflect - Users will add reflections to their saved quotes.
 * Intention - Users will display a single quote through a virtual vision board and "manifest it" into their lives.
 
 ## API
