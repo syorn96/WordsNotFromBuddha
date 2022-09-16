@@ -15,9 +15,10 @@ align-items: center;">
     <form method="POST" action="/users/reflect/<%=quote.id%>">
         <div class="mb-3">
         <label class="form-label" for="content">Create Reflection:</label>
-        <textarea class="form-control" rows="3" type="text" id="text" name="content"></textarea>
+        <textarea class="form-control" rows="5" type="text" id="text" name="content" placeholder="Write to your soul's content because it's just your beautiful thoughts and your thoughts alone..."></textarea>
         <input hidden type="integer" name="quoteId" value="<%=quote.id%>">
         <input hidden type="integer" name="userId" value="<%=userInfo.id%>">
+        <br>
         <button type="submit">Submit</button>
     </div>
     </form>
