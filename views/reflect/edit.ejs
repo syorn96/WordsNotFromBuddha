@@ -1,4 +1,8 @@
-<h3><%=reflection.quote.content%></h3>
+<div style="display: flex;
+justify-content: center;
+align-items: center;">
+<div style="width: 60vw">
+<h3>"<%=reflection.quote.content%>"</h3>
 <p style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size:medium;">-<%=reflection.quote.author%></p>
 <h4><%=reflection.content%></h4>
 
@@ -10,5 +14,7 @@
 
 <form method="POST" action="/users/reflect/edit/<%=reflection.id%>/?_method=DELETE">
 
-    <input type="submit" value="delete">
+    <button class="btn btn-secondary btn-sm" type="submit">Delete Reflection</button>
 </form>
+</div>
+</div>

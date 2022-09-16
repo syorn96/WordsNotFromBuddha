@@ -1,10 +1,13 @@
-<div id="center">
+<div style="display: flex;
+justify-content: center;
+align-items: center;">
+<div>
 <% singleQuote.forEach(quote => { %>
-    <div>
-        <h3><%=quote.content%></h3>
+    <div style="width: 60vw">
+        <h3>" <%=quote.content%> "</h3>
         <p style="font-family: Arial, Helvetica, sans-serif; font-weight: bold;">- <%=quote.author%></p>    
     </div>
-    <h4>Reflections:</h4>
+    <h4>Reflection(s)</h4>
     <% reflection.forEach(reflect => {%>
         <p><%=reflect.content%></p>
     <%})%>
@@ -17,4 +20,5 @@
         <button type="submit">Submit</button>
     </form>
 <% }) %>
+</div>
 </div>
