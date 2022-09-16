@@ -1,7 +1,9 @@
+<div style="background-image: url(/public/media/wrapper.png); background-size:cover;">
 <h1>🧘🏽 MEDITATE 🧘🏽‍♀️</h1>
-
+</div>
 <% quotes.forEach((quote, index) => { %>
     <div>
+        <br>
         <h4>"<%=quote.q%>"</h4>
         <p style="font-family: Arial, Helvetica, sans-serif; font-weight: bold;"><%=quote.a%></p>
         <div>
@@ -11,6 +13,7 @@
                 <button class="clickme btn btn-secondary" type="submit">Add quote to Reflect</button>
             </form>
         </div>
+        <br>
         <hr>
     </div>
 <%})%>
