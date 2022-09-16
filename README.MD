@@ -17,6 +17,9 @@ https://zenquotes.io/
 ![ZenQuotes](./media/APIProof2.png)
 ![ZenQuotes2](./media/Apiproof.png)
 
+https://aztro.readthedocs.io/en/latest/#
+![AZTROAPI](./public/media/AZTRORESTAPI.png)
+
 ## ERD's
 ![ERD](./media/ERD.png)
 

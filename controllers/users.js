@@ -117,7 +117,6 @@ router.get('/profile', async (req,res)=> {
             axios.post(URL)
             .then((response) => {
                 horoscope = response.data
-                // res.send(response.data)
                 res.render('users/profile.ejs', {
                     user: res.locals.user,
                     horoscope: response.data,
