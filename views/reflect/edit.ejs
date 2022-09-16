@@ -3,12 +3,12 @@ justify-content: center;
 align-items: center;">
 <div style="width: 60vw">
 <h3>"<%=reflection.quote.content%>"</h3>
-<p style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size:medium;">-<%=reflection.quote.author%></p>
+<p style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size:medium;"><%=reflection.quote.author%></p>
 <h4><%=reflection.content%></h4>
 
 <form method="POST" action="/users/reflect/edit/<%=reflection.id%>/?_method=PUT">
-    <label for="content">Edit Reflection:</label>
-    <input type="text" id="content" name="content" value="<%=reflection.content%>" required>
+    <label class="form-label" for="content">Edit Reflection:</label>
+    <textarea class="form-control" rows="3" type="text" id="content" name="content" required> <%=reflection.content%> </textarea>
     <button type="submit">submit</button>
 </form>
 

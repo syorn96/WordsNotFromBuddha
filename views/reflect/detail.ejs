@@ -5,7 +5,7 @@ align-items: center;">
 <% singleQuote.forEach(quote => { %>
     <div style="width: 60vw">
         <h3>" <%=quote.content%> "</h3>
-        <p style="font-family: Arial, Helvetica, sans-serif; font-weight: bold;">- <%=quote.author%></p>    
+        <p style="font-family: Arial, Helvetica, sans-serif; font-weight: bold;"><%=quote.author%></p>    
     </div>
     <h4>Reflection(s)</h4>
     <% reflection.forEach(reflect => {%>
@@ -13,11 +13,13 @@ align-items: center;">
     <%})%>
     
     <form method="POST" action="/users/reflect/<%=quote.id%>">
-        <label for="content">Create Reflection:</label>
-        <input type="text" id="text" name="content">
+        <div class="mb-3">
+        <label class="form-label" for="content">Create Reflection:</label>
+        <textarea class="form-control" rows="3" type="text" id="text" name="content"></textarea>
         <input hidden type="integer" name="quoteId" value="<%=quote.id%>">
         <input hidden type="integer" name="userId" value="<%=userInfo.id%>">
         <button type="submit">Submit</button>
+    </div>
     </form>
 <% }) %>
 </div>

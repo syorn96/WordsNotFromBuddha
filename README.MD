@@ -18,6 +18,7 @@ https://zenquotes.io/
 ![ZenQuotes2](./public/media/Apiproof.png)
 
 https://aztro.readthedocs.io/en/latest/#
+
 ![AZTROAPI](./public/media/AZTRORESTAPI.png)
 
 ## ERD's
@@ -100,8 +101,9 @@ https://aztro.readthedocs.io/en/latest/#
 * Functioning forms to delete or add quotes to reflect page.
 
 ## Stretchgoals
-* Audios for each specific page.
 * Add and display username
+* Add second API (horoscopes)
+* Add third API ()
 
 ## Potential Roadblocks
 * Associating mutliple models
