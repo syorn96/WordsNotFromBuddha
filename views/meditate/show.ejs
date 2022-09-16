@@ -1,8 +1,8 @@
-<h1> MEDITATE </h1>
+<h1>🧘🏽 MEDITATE 🧘🏽‍♀️</h1>
 
 <% quotes.forEach((quote, index) => { %>
     <div>
-        <h5>"<%=quote.q%>"</h5>
+        <h4>"<%=quote.q%>"</h4>
         <p style="font-family: Arial, Helvetica, sans-serif; font-weight: bold;"><%=quote.a%></p>
         <div>
             <form method="POST" action="/users/meditate">
@@ -14,5 +14,5 @@
         <hr>
     </div>
 <%})%>
-<a href="users/reflect"><button class="clickme btn btn-secondary">Done Meditating? ➡ Time to Reflect!</button></a>
+<a href="/users/reflect"><button class="clickme btn btn-secondary">Done Meditating? ➡ Time to Reflect!</button></a>
 

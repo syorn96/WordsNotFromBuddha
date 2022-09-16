@@ -1,4 +1,4 @@
-<h1>REFLECT<h1>
+<h1>☁️ REFLECT ✍🏽<h1>
     <%quotes.forEach(quote => {%>
     <div style="display: flex-wrap">
         <div>
@@ -7,16 +7,18 @@
     </div> 
     <div>
         <form method="POST" action="/users/reflect/<%=quote.id%>/?_method=DELETE">
-        <button class="btn btn-secondary btn-sm" type="submit">Delete Quote</button>
-        </form>
-        <h1>Reflection:</h1>
+        
+        <h3>Reflection:</h3>
         <% reflections.filter(reflection => { %>
             <% if(reflection.quoteId == quote.id){ %>
-                
+                <p style="font-size:x-large; "><%=reflection.content%></p>
     </div>
-                <a href="/users/reflect/edit/<%=reflection.id%>"><p><%=reflection.content%></p></a>
+                <button class="btn btn-secondary btn-sm"><a href="/users/reflect/edit/<%=reflection.id%>">Edit Reflection</a></button>
+                
         <%}})%>
-        <a href="/users/reflect/<%=quote.id%>">Add Reflection</a>
-   
+        <button class="btn btn-secondary btn-sm"><a href="/users/reflect/<%=quote.id%>">Add Reflection</a></button>
+        <button class="btn btn-secondary btn-sm" type="submit">Delete Quote</button>
+        </form>
+   <hr>
 <% }) %>
 </div>
