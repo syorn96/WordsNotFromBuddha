@@ -2,9 +2,6 @@
     text-align: center;
     justify-content: center;
     font-family: 'Old Standard TT', serif;
-
-
-
 }
 
 #background {
@@ -59,8 +56,21 @@
     cursor: pointer; 
     border-radius: 10px;
     padding: 10px;
+    font-size: medium;
+  }
+
+  #reflect-Btn {
+    display: none;
+    position: fixed; 
+    bottom: 20px; 
+    left: 30px; 
+    z-index: 99; 
+    color: white; 
+    cursor: pointer; 
+    border-radius: 10px;
+    padding: 10px;
   }
   
   #top-Btn:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
+    background-color: #555;
   }
