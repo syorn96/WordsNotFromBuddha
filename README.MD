@@ -14,8 +14,8 @@ My goal is to create a virtual space for users to just "Zen Out".
 
 https://zenquotes.io/
 
-![ZenQuotes](./media/APIProof2.png)
-![ZenQuotes2](./media/Apiproof.png)
+![ZenQuotes](./public/media/APIProof2.png)
+![ZenQuotes2](./public/media/Apiproof.png)
 
 https://aztro.readthedocs.io/en/latest/#
 ![AZTROAPI](./public/media/AZTRORESTAPI.png)
