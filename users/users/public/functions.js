@@ -1,7 +1,7 @@
-// let buttons = document.querySelectorAll('.clickme')
+let buttons = document.querySelectorAll('.clickme')
 
-// buttons.forEach(e => {
-//     e.addEventListener('click', ()=> {
-//         e.parentElement.setAttribute('style', 'display:none;')
-//     })
-// })
+buttons.forEach(e => {
+    e.addEventListener('click', ()=> {
+        e.parentElement.setAttribute('style', 'display:none;')
+    })
+})

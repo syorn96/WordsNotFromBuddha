@@ -113,7 +113,7 @@ router.get('/profile', async (req,res)=> {
             let sign = determineSign(month, day)
             // res.send(`${month} + ${sign} + ${day}`)
     
-            const URL = `https://aztro.sameerkumar.website/?sign=${sign}&day=today`
+            const URL = `https://aztro.sameerkumar.website/?sign=${sign}&day=yesterday`
             axios.post(URL)
             .then((response) => {
                 horoscope = response.data

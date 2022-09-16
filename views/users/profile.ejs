@@ -1,6 +1,10 @@
-<h1>Welcome to your WNFB profile, <%=sign%>-<%= user.username %>!</h1>
-<div id="profile">
-    <div style="width: 30vw">
+<h1>Welcome to your WNFB profile,</h1> 
+<h1><%=sign%> <%= user.username %>!</h1>
+<div style="display: flex;
+justify-content: center;
+align-items: center;">
+<div id="profile" class="boxy">
+    <div style="width: 25vw; margin: 7vh;">
         <p><%=horoscope.current_date%></p>
         <p>Daily Horoscope: <%=horoscope.description%></p>
         <p>Daily Compatibility: <%=horoscope.compatibility%></p>
@@ -8,10 +12,11 @@
         <p>Daily Lucky Time: <%=horoscope.lucky_time%></p>
     </div> 
 
-<div style="margin-top: 7vh">
-<p>Thank you for joining the WNFB Family.</p>
-<p><a href="/users/meditate">Meditate</a> on quotes that resonate with you.</p>
-<p><a href="/users/reflect">Reflect</a> on a saved quote.</p>
-<p>Create an <a href="/users/intention">Intention</a> on a virtual vision board.</p>
+    <div style="margin: 7vh;">
+        <p>Thank you for joining the WNFB Family.</p>
+        <p><a href="/users/meditate">Meditate</a> on quotes that resonate with you.</p>
+        <p><a href="/users/reflect">Reflect</a> on saved quotes.</p>
+        <p>Create an <a href="/users/intention">Intention</a> on a virtual vision board.</p>
+    </div>
 </div>
 </div>

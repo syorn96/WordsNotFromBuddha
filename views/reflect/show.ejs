@@ -1,17 +1,22 @@
 <h1>REFLECT<h1>
-<% quotes.forEach(quote => { %>
+    <%quotes.forEach(quote => {%>
+    <div style="display: flex-wrap">
+        <div>
+        <h3>"<%=quote.content%>"</h3>
+        <p style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size:medium;">-<%=quote.author%></p>
+    </div> 
     <div>
-        <h3><%=quote.content%></h3>
-        <p><%=quote.author%></p>
         <form method="POST" action="/users/reflect/<%=quote.id%>/?_method=DELETE">
-            <input type="submit" value="delete">
+        <button class="btn btn-secondary btn-sm" type="submit">Delete Quote</button>
         </form>
-        <h4>Reflection</h4>
+        <h1>Reflection:</h1>
         <% reflections.filter(reflection => { %>
             <% if(reflection.quoteId == quote.id){ %>
-                <p><%=reflection.content%></p> 
-                <a href="/users/reflect/edit/<%=reflection.id%>">edit</a>
+                
+    </div>
+                <a href="/users/reflect/edit/<%=reflection.id%>"><p><%=reflection.content%></p></a>
         <%}})%>
         <a href="/users/reflect/<%=quote.id%>">Add Reflection</a>
-    </div>
+   
 <% }) %>
+</div>
