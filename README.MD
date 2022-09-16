@@ -21,7 +21,7 @@ https://aztro.readthedocs.io/en/latest/#
 ![AZTROAPI](./public/media/AZTRORESTAPI.png)
 
 ## ERD's
-![ERD](./media/ERD.png)
+![ERD](./public/media/ERD.png)
 
 
 ## Restful Routing Charts
@@ -78,10 +78,10 @@ https://aztro.readthedocs.io/en/latest/#
 
 
 ## Wireframes
-![Wireframe 1](./media/Wireframe1.png)
-![Wireframe 2](./media/Wireframe2.png)
-![Wireframe 3](./media/Wireframe3.png)
-![Wireframe 4](./media/Wireframe4.png)
+![Wireframe 1](./public/media/Wireframe1.png)
+![Wireframe 2](./public/media/Wireframe2.png)
+![Wireframe 3](./public/media/Wireframe3.png)
+![Wireframe 4](./public/media/Wireframe4.png)
 
 ## User Stories
 
