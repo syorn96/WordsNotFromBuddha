@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser')
 const db = require('./models')
 const crypto = require('crypto-js')
 const methodOverride = require('method-override')
-const path = require('path')
+
 // config express/app
 const app = express()
 const PORT = process.env.PORT || 3000
@@ -14,11 +14,10 @@ app.set('view engine', 'ejs')
 app.use(ejsLayouts)
 app.use(express.urlencoded({ extended:false }))
 app.use(cookieParser())
-// app.use(express.static('public'))
+
 app.use('/public', express.static('public'));
 app.use('/users', express.static('users'))
-// app.use(express.static(path.join(__dirname, 'static')));
-// app.use('/users/users', express.static('users'))
+
 
 app.use(methodOverride("_method"));
 
