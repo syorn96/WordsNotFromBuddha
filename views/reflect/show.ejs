@@ -5,7 +5,7 @@
                 <h3>"<%=quote.content%>"</h3>
                 <p style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size:medium;"><%=quote.author%></p>
             <form method="POST" action="/users/reflect/<%=quote.id%>/?_method=DELETE">
-                <button style="margin: 2vw" class="btn btn-secondary btn-sm"><a href="/users/reflect/<%=quote.id%>">Add Reflection</a></button>
+                <a style="margin: 2vw" class="btn btn-secondary btn-sm" href="/users/reflect/<%=quote.id%>">Add Reflection</a>
                 <button style="margin: 2vw" class="btn btn-secondary btn-sm" type="submit">Delete Quote</button>
             </form>
             
@@ -15,7 +15,7 @@
                 <p style="font-size:x-large; "><%=reflection.content%></p>
             <form method="POST" action="/users/reflect/edit/<%=reflection.id%>/?_method=DELETE">
         
-                <button style="margin: 2vw" class="btn btn-secondary btn-sm" type="button"><a href="/users/reflect/edit/<%=reflection.id%>">Edit Reflection</a></button> 
+                <a style="margin: 2vw" class="btn btn-secondary btn-sm" href="/users/reflect/edit/<%=reflection.id%>">Edit Reflection</a>
                 <button style="margin: 2vw" class="btn btn-secondary btn-sm" type="submit">Delete Reflection</button>
 
             </form>
