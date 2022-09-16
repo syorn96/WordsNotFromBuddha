@@ -37,7 +37,7 @@
 
 :any-link {
     text-decoration: none;
-    color: rgb(205, 228, 255);
+    color: rgba(0, 119, 255, 0.667);
 }
 :any-link:hover {
     color:black
