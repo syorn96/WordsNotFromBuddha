@@ -3,13 +3,14 @@ const router = express.Router()
 const db = require('../models')
 const axios = require('axios')
 
-
 router.get('/', (req,res) => {
     console.log(res.locals.user.email)
     axios.get(`https://zenquotes.io/api/quotes`)
     .then(response => {
         // console.log(response)
-        res.render('meditate/show.ejs', { quotes: response.data })
+        res.render('meditate/show.ejs', { 
+            quotes: response.data
+        })
     })
 })
 

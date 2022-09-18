@@ -95,6 +95,47 @@ router.get('/logout', (req,res)=> {
     // redirect to homepage
     res.redirect('/')
 })
+router.put('/profile/account', async (req,res)=> {
+    if(!res.locals.user) {
+        res.redirect('/users/login?message=You must authenticate before you are authorized to view this resource.')
+        // otherwise, show them their profile
+    } else {
+        try {
+        const [user, userCreated]= await db.user.findOrCreate({
+            where: {
+                username: req.body.username,
+                email: req.body.email,
+                password: req.body.password,
+                birthMonth: req.body.month,
+                birthDay: req.body.day
+            }
+    })
+    res.redirect('/users/profile')
+
+    }catch(err) {
+        console.log(err)
+    }
+}
+})
+router.get('/profile/account', async (req,res)=> {
+    if(!res.locals.user) {
+        res.redirect('/users/login?message=You must authenticate before you are authorized to view this resource.')
+        // otherwise, show them their profile
+    } else {
+        try {
+        userInfo = await db.user.findOne({
+            where: {
+                email: res.locals.user.email
+            }
+    })
+    res.render('users/account.ejs', { user: userInfo})
+
+    }catch(err) {
+        console.log(err)
+    }
+}
+})
+
 
 router.get('/profile', async (req,res)=> {
     // if the user is not logged ... we need to redirect to the login form

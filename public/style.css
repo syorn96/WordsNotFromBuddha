@@ -1,3 +1,4 @@
+
 #center {
     text-align: center;
     justify-content: center;
@@ -5,7 +6,7 @@
 }
 
 #background {
-    background-image: url("https://cdn.pixabay.com/photo/2016/10/19/03/32/duck-1752065_960_720.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2018/09/03/23/56/sea-3652697_960_720.jpg");
     background-repeat: none;
     background-size: cover;
 }
@@ -20,7 +21,7 @@
     width: 65vw;
     height: 70vh;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.485);
+    background-color: rgba(255, 255, 255, 0.681);
     border-radius: 50px;
     padding: 25px;
     display: flex;
@@ -34,10 +35,10 @@
 
 :any-link {
     text-decoration: none;
-    color: rgba(0, 119, 255, 0.667);
+    color: rgb(0, 94, 255)
 }
 :any-link:hover {
-    color:black
+    color:rgb(0, 94, 255)
 }
 
 #profile {
