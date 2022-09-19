@@ -95,21 +95,38 @@ router.get('/logout', (req,res)=> {
     // redirect to homepage
     res.redirect('/')
 })
+
+router.delete('/profile/account', async (req,res)=> {
+    if(!res.locals.user) {
+        res.redirect('/users/login?message=You must authenticate before you are authorized to view this resource.')
+        // otherwise, show them their profile
+    } else {
+        try {
+        const deleteUser = await db.user.destroy({
+                where: {email: res.locals.user.email}
+            })
+    res.redirect('/users/new')
+
+    }catch(err) {
+        console.log(err)
+    }
+}
+})
+
 router.put('/profile/account', async (req,res)=> {
     if(!res.locals.user) {
         res.redirect('/users/login?message=You must authenticate before you are authorized to view this resource.')
         // otherwise, show them their profile
     } else {
         try {
-        const [user, userCreated]= await db.user.findOrCreate({
-            where: {
+        const editUser = await db.user.update({
                 username: req.body.username,
-                email: req.body.email,
                 password: req.body.password,
                 birthMonth: req.body.month,
                 birthDay: req.body.day
-            }
-    })
+            }, {
+                where: {email: res.locals.user.email}
+            })
     res.redirect('/users/profile')
 
     }catch(err) {
@@ -117,6 +134,9 @@ router.put('/profile/account', async (req,res)=> {
     }
 }
 })
+
+
+
 router.get('/profile/account', async (req,res)=> {
     if(!res.locals.user) {
         res.redirect('/users/login?message=You must authenticate before you are authorized to view this resource.')
