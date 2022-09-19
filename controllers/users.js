@@ -102,9 +102,31 @@ router.delete('/profile/account', async (req,res)=> {
         // otherwise, show them their profile
     } else {
         try {
+        const deleteReflection = await db.reflection.destroy({
+            where: {userId: res.locals.user.id}
+        })
+        const findUserQuotes = await db.user_quotes.findAll({
+            where: {userId: res.locals.user.id}
+        })
+        console.log(findUserQuotes.forEach(id => {
+            id.quoteId
+        })
+    )
+    //     const deleteQuotes = await db.quote.destroy({
+    //         where: {id: [findUserQuotes.forEach(id => {
+    //             id.quoteId
+    //         })]
+    //     }
+    //     })
+        const deleteUserQuotes = await db.user_quotes.destroy({
+            where: {userId: res.locals.user.id},
+            include: [{
+                model: db.quote}]
+        })
         const deleteUser = await db.user.destroy({
                 where: {email: res.locals.user.email}
             })
+        
         res.redirect('/users/new')
 
     }catch(err) {
