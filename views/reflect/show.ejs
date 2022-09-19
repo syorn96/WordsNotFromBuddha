@@ -6,8 +6,8 @@
                 <h3>"<%=quote.content%>"</h3>
                 <p style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size:medium;"><%=quote.author%></p>
             <form method="POST" action="/users/reflect/<%=quote.id%>/?_method=DELETE">
-                <a style="margin: 2vw" class="btn btn-secondary btn-sm" href="/users/reflect/<%=quote.id%>">Add Reflection</a>
-                <button style="margin: 2vw" class="btn btn-secondary btn-sm" type="submit">Delete Quote</button>
+                <a style="margin: 2vw" class="btn btn-dark btn-sm" href="/users/reflect/<%=quote.id%>">Add Reflection</a>
+                <button style="margin: 2vw" class="btn btn-dark btn-sm" type="submit">Delete Quote</button>
             </form>
             
                 <h3 style="text-decoration:underline">Reflection(s):</h3>
@@ -16,8 +16,8 @@
                 <p style="font-size:x-large; "><%=reflection.content%></p>
             <form method="POST" action="/users/reflect/edit/<%=reflection.id%>/?_method=DELETE">
         
-                <a style="margin: 2vw" class="btn btn-secondary btn-sm" href="/users/reflect/edit/<%=reflection.id%>">Edit Reflection</a>
-                <button style="margin: 2vw" class="btn btn-secondary btn-sm" type="submit">Delete Reflection</button>
+                <a style="margin: 2vw" class="btn btn-dark btn-sm" href="/users/reflect/edit/<%=reflection.id%>">Edit Reflection</a>
+                <button style="margin: 2vw" class="btn btn-dark btn-sm" type="submit">Delete Reflection</button>
 
             </form>
         
@@ -26,5 +26,5 @@
         <% }) %>
         
     </div>
-    <a class="btn btn-secondary" href="/users/intention">Done Reflecting? ➡ Create an Intention!</a>
+    <a class="btn btn-dark" href="/users/intention">Done Reflecting? ➡ Create an Intention!</a>
 </div>

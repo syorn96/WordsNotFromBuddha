@@ -9,13 +9,14 @@ align-items: center;">
 <form method="POST" action="/users/reflect/edit/<%=reflection.id%>/?_method=PUT">
     <label class="form-label" for="content">Edit Reflection:</label>
     <textarea class="form-control" rows="3" type="text" id="content" name="content" required> <%=reflection.content%> </textarea>
-    <button type="submit">submit</button>
+    <button class="btn btn-dark" type="submit">submit</button>
 </form>
 
 <form method="POST" action="/users/reflect/edit/<%=reflection.id%>/?_method=DELETE">
 
-    <button class="btn btn-secondary btn-sm" type="submit">Delete Reflection</button>
+    <button class="btn btn-dark btn-sm" type="submit">Delete Reflection</button>
     <a style="margin: 2vw" class="btn btn-secondary btn-sm" href="/users/reflect">Back to Reflect Page</a>
 </form>
+
 </div>
 </div>

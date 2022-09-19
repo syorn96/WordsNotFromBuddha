@@ -11,14 +11,14 @@
             <form method="POST" action="/users/meditate">
                 <input hidden type="text" name="content" value="<%=quote.q%>" required>
                 <input hidden type="text" name="author" value="<%=quote.a%>" required>
-                <button class="clickme btn btn-secondary" type="submit">Add quote to Reflect</button>
+                <button class="clickme btn btn-dark" type="submit">Add quote to Reflect</button>
             </form>
         </div>
         <br>
         <hr>
     </div>
 <%})%>
-<button class="btn btn-secondary btn-sm" onclick="topFunction()" id="top-Btn" title="Go to top">Return to Top</button>
-<a class="btn btn-secondary" id="reflect-Btn" href="/users/reflect">Done Meditating? ➡ Reflect!</a>
+<button class="btn btn-dark btn-sm" onclick="topFunction()" id="top-Btn" title="Go to top">Return to Top</button>
+<a class="btn btn-dark" id="reflect-Btn" href="/users/reflect">Done Meditating? ➡ Reflect!</a>
 <script src="../../public/scroll.js"></script>
 

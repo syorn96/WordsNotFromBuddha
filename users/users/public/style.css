@@ -1,3 +1,4 @@
+
 #center {
     text-align: center;
     justify-content: center;
@@ -5,7 +6,7 @@
 }
 
 #background {
-    background-image: url("https://cdn.pixabay.com/photo/2018/09/03/23/56/sea-3652697_960_720.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2017/12/31/15/39/marine-3052592_960_720.jpg");
     background-repeat: none;
     background-size: cover;
 }
@@ -34,10 +35,10 @@
 
 :any-link {
     text-decoration: none;
-    color: rgba(0, 119, 255, 0.667);
+    color: rgb(0, 94, 255)
 }
 :any-link:hover {
-    color:rgb(166, 0, 0)
+    color:rgb(0, 94, 255)
 }
 
 #profile {
