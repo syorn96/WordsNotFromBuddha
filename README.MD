@@ -38,21 +38,22 @@ https://aztro.readthedocs.io/en/latest/#
 |:------:|:------:|:-----------:|
 | POST   | /users | Create new user |
 | GET    | /users/new | Render form for creating new User |
-| PUT    | /users/profile | Edit User |
-| DELETE | /users/profile | Delete User |
+| GET    | /users/profile | Display User information & FREE horoscope |
+| PUT    | /users/profile/account | Edit User |
+| DELETE | /users/profile/account | Delete User |
 
 #### Meditate
 | Method | Action | Description |
 |:------:|:------:|:-----------:|
 | GET    | /users/:id/meditate | Show 50 random quotes |
-| POST   | /users/:id/meditate | Add quotes to user's reflect page |
+| CREATE   | /users/:id/meditate | Add quotes to user's reflect page |
 
 #### Reflect
 | Method | Action | Description |
 |:------:|:------:|:-----------:|
 | GET    | /users/:id/reflect | Show all quotes with reflections |
 | GET    | /users/:id/reflect/:id | Render form to create a reflection for a quote |
-| POST   | /users/:id/reflect/:id | Create a reflection for a quote |
+| CREATE   | /users/:id/reflect/:id | Create a reflection for a quote |
 | GET    | /users/:id/reflect/:id | Show a single quote with reflection(s) |
 | DELETE | /users/:id/reflect | Delete quote from reflection page |
 | GET    | /users/:id/reflect/edit/:id | Show form to edit reflection |
