@@ -32,7 +32,7 @@ https://aztro.readthedocs.io/en/latest/#
 
 ## Restful Routing Charts
 
-#### User
+#### Users
 
 | Method | Action | Description |
 |:------:|:------:|:-----------:|
@@ -46,14 +46,14 @@ https://aztro.readthedocs.io/en/latest/#
 | Method | Action | Description |
 |:------:|:------:|:-----------:|
 | GET    | /users/:id/meditate | Show 50 random quotes |
-| CREATE   | /users/:id/meditate | Add quotes to user's reflect page |
+| POST   | /users/:id/meditate | Add quotes to user's reflect page |
 
 #### Reflect
 | Method | Action | Description |
 |:------:|:------:|:-----------:|
 | GET    | /users/:id/reflect | Show all quotes with reflections |
 | GET    | /users/:id/reflect/:id | Render form to create a reflection for a quote |
-| CREATE   | /users/:id/reflect/:id | Create a reflection for a quote |
+| POST   | /users/:id/reflect/:id | Create a reflection for a quote |
 | GET    | /users/:id/reflect/:id | Show a single quote with reflection(s) |
 | DELETE | /users/:id/reflect | Delete quote from reflection page |
 | GET    | /users/:id/reflect/edit/:id | Show form to edit reflection |
