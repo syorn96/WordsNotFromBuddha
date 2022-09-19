@@ -1,29 +1,29 @@
 <div style="display: flex;
 justify-content: center;
 align-items: center;">
-<div>
-<% singleQuote.forEach(quote => { %>
-    <div style="width: 60vw">
-        <h3>" <%=quote.content%> "</h3>
-        <p style="font-family: Arial, Helvetica, sans-serif; font-weight: bold;"><%=quote.author%></p>    
-    </div>
-    <h4>Reflection(s)</h4>
-    <% reflection.forEach(reflect => {%>
-        <p><%=reflect.content%></p>
-    <%})%>
+    <div>
+        <% singleQuote.forEach(quote => { %>
+        <div style="width: 60vw">
+            <h3>" <%=quote.content%> "</h3>
+            <p style="font-family: Arial, Helvetica, sans-serif; font-weight: bold;"><%=quote.author%></p>    
+        </div>
+        <h4>Reflection(s)</h4>
+        <% reflection.forEach(reflect => {%>
+            <p><%=reflect.content%></p>
+        <%})%>
     
-    <form method="POST" action="/users/reflect/<%=quote.id%>">
-        <div class="mb-3">
-        <label class="form-label" for="content">Create Reflection:</label>
-        <textarea class="form-control" rows="5" type="text" id="text" name="content" placeholder="Write to your soul's content because it's just your beautiful thoughts and your thoughts alone..."></textarea>
-        <input hidden type="integer" name="quoteId" value="<%=quote.id%>">
-        <input hidden type="integer" name="userId" value="<%=userInfo.id%>">
-        <br>
-        <button class="btn btn-dark" type="submit">Submit</button>
-        <a class="btn btn-dark" href="/users/reflect">Cancel Reflection</a>
-    </div>
-    </form>
+        <form method="POST" action="/users/reflect/<%=quote.id%>">
+            <div class="mb-3">
+                <label class="form-label" for="content">Create Reflection:</label>
+                <textarea class="form-control" rows="5" type="text" id="text" name="content" placeholder="Write to your soul's content because it's just your beautiful thoughts and your thoughts alone..."></textarea>
+                <input hidden type="integer" name="quoteId" value="<%=quote.id%>">
+                <input hidden type="integer" name="userId" value="<%=userInfo.id%>">
+                <br>
+                <button class="btn btn-dark" type="submit">Submit</button>
+                <a class="btn btn-dark" href="/users/reflect">Cancel Reflection</a>
+            </div>
+        </form>
     
-<% }) %>
-</div>
+        <% }) %>
+    </div>
 </div>

@@ -1,29 +1,31 @@
 <h1>Welcome to your WNFB profile,</h1> 
-<h1><%=sign%> <a href="/users/profile/account" style="font-style: italic;"><%= user.username %>!</a></h1>
+<h1><%=sign%> 
+    <a href="/users/profile/account" style="font-style: italic;"><%= user.username %>!</a>
+</h1>
 <div style="display: flex;
-justify-content: center;
-align-items: center;">
-<div id="profile" class="boxy">
-    <div style="width: 45vw; margin: 5vw;">
-        <p style="font-size:large"><%=horoscope.current_date%></p>
-        <p style="font-size:large">Daily Horoscope: <%=horoscope.description%></p>
-        <p style="font-size:large">Daily Compatibility: <%=horoscope.compatibility%></p>
-        <p style="font-size:large">Daily Lucky Number: <%=horoscope.lucky_number%></p>
-        <p style="font-size:large">Daily Lucky Time: <%=horoscope.lucky_time%></p>
-    </div> 
+    justify-content: center;
+    align-items: center;">
+    <div id="profile" class="boxy">
+        <div style="width: 45vw; margin: 5vw;">
+            <p style="font-size:large"><%=horoscope.current_date%></p>
+            <p style="font-size:large">Daily Horoscope: <%=horoscope.description%></p>
+            <p style="font-size:large">Daily Compatibility: <%=horoscope.compatibility%></p>
+            <p style="font-size:large">Daily Lucky Number: <%=horoscope.lucky_number%></p>
+            <p style="font-size:large">Daily Lucky Time: <%=horoscope.lucky_time%></p>
+        </div> 
 
-    <div style="margin: 5vw;">
-        <p style="font-size:x-large;">Thank you for joining WNFB.</p>
-        <p style="font-size:large"><a href="/users/meditate">Meditate</a> on quotes that resonate with you.</p>
-        <p style="font-size:large">Allocate time to <a href="/users/reflect">Reflect</a> on your quotes.</p>
-        <p style="font-size:large">Create an <a href="/users/intention">Intention</a> on a virtual vision board.</p>
-        <br>
-        <a class="btn btn-dark" href="/users/profile/account">Edit Account</a> 
-        <br>
-        <hr>
-        <form method="POST" action="/users/profile/account/?_method=DELETE">
-            <button class="btn btn-dark" type="submit">Delete Account</button>
+        <div style="margin: 5vw;">
+            <p style="font-size:x-large;">Thank you for joining WNFB.</p>
+            <p style="font-size:large"><a href="/users/meditate">Meditate</a> on quotes that resonate with you.</p>
+            <p style="font-size:large">Allocate time to <a href="/users/reflect">Reflect</a> on your quotes.</p>
+            <p style="font-size:large">Create an <a href="/users/intention">Intention</a> on a virtual vision board.</p>
+            <br>
+            <a class="btn btn-dark" href="/users/profile/account">Edit Account</a> 
+            <br>
+            <hr>
+            <form method="POST" action="/users/profile/account/?_method=DELETE">
+                <button class="btn btn-dark" type="submit">Delete Account</button>
             </form>
+        </div>
     </div>
-</div>
 </div>

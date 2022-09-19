@@ -23,60 +23,44 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <% if (user) { %>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="/users/profile">Profile</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/users/logout">Logout</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Zen Out
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/users/meditate">Meditate</a></li>
-                  <li><a class="dropdown-item" href="/users/reflect">Reflect</a></li>
-                  <li><a class="dropdown-item" href="/users/intention">Intention</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/about">About WNFB</a>
-              </li>
-            </ul>
-            <% } else { %>
-                
-                <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/users/new">Signup</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/users/login">Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/about">About WNFB</a>
-                  </li>
-                </ul>
-                <% } %>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <% if (user) { %>
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/users/profile">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="/users/logout">Logout</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Zen Out</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/users/meditate">Meditate</a></li>
+                    <li><a class="dropdown-item" href="/users/reflect">Reflect</a></li>
+                    <li><a class="dropdown-item" href="/users/intention">Intention</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="/about">About WNFB</a></li>
+              </ul>
+              <% } else { %>  
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/users/new">Signup</a></li>
+                <li class="nav-item"><a class="nav-link" href="/users/login">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About WNFB</a></li>
+              </ul>
+              <% } %>
+            </div>
           </div>
-        </div>
-        <div class="btn-group btn-group-toggle form-inline" data-toggle="buttons">
-          <label class="btn btn-dark btn-sm btn-outline-dark" style="margin-right: 1vw;" id="yin">
-            <input type="radio" name="options" autocomplete="off">YIN
-          </label>
-          <label class="btn btn-light btn-sm btn-outline-light" id="yang">
-            <input type="radio" name="options" autocomplete="off" checked>YANG</label>
+          <div class="btn-group btn-group-toggle form-inline" data-toggle="buttons">
+            <label class="btn btn-dark btn-sm btn-outline-dark" style="margin-right: 1vw;" id="yin">
+              <input type="radio" name="options" autocomplete="off">YIN
+            </label>
+            <label class="btn btn-light btn-sm btn-outline-light" id="yang">
+              <input type="radio" name="options" autocomplete="off" checked>YANG</label>
           </div>
-      </nav>
+    </nav>
     <div id="center">
         <img id="header" src="/public/media/WNFB.png"/>
     <%- body %>
     </div>
     <footer>
-        <p style="color:white;">Inspirational quotes provided by</p>
-        <a target="_blank" href="https://zenquotes.io/" target="_blank">ZenQuotes API</a>
+      <p style="color:white;">Inspirational quotes provided by</p>
+      <a target="_blank" href="https://zenquotes.io/" target="_blank">ZenQuotes API</a>
     </footer>
 </body>
 </html>
