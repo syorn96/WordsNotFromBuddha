@@ -1,5 +1,9 @@
 # Words Not From Buddha
 
+## Link to App
+
+https://wordsnotfrombuddha-syorn96.koyeb.app/
+
 ## Project Idea and Description
 
 Words have the power to create or break a person's reality. 
