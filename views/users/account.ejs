@@ -3,24 +3,26 @@
 justify-content: center;
 align-items: center;">
     <div class="boxy" style="text-align:right; font-size: larger;">
+        <% if (message) { %>
+            <p><%= message %></p>
+        <% } %>
         <form method="POST" action="/users/profile/account/?_method=PUT">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" value="<%=user.username%>">
+            <input type="text" id="username" name="username" value="<%=user.username%>" required>
             <hr>
 
             <label for="email">Email:</label>
-            <input type="text" id="email" name="email" value="<%=user.email%>">
+            <input type="text" id="email" name="email" value="<%=user.email%>" required>
             <hr>
             
             <label for="password">Old Password:</label>
-            <input type="password" id="password" name="password" value="********">
-       
+            <input type="password" id="password" name="password" value="********" required>
             <hr>
 
             <label for="password">New Password:</label>
-            <input type="password" id="password" name="newPassword">
-       
+            <input type="password" id="password" name="newPassword" required>
             <hr>
+
             <label for="birthMonth">Birth Month</label>
             <select id="birthMonth" name="month" required>
                 <option value="" selected disabled hidden><%=user.birthMonth%></option>

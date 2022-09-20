@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.quote.belongsToMany(models.user, {through: "user_quotes"} )
+      models.quote.belongsToMany(models.user, {through: "user_quotes", onDelete: 'CASCADE'} )
       models.quote.hasMany(models.reflection)
     }
   }

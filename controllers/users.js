@@ -105,26 +105,23 @@ router.delete('/profile/account', async (req,res)=> {
         const deleteReflection = await db.reflection.destroy({
             where: {userId: res.locals.user.id}
         })
-        const findUserQuotes = await db.user_quotes.findAll({
+        // const findUserQuotes = await db.user_quotes.findAll({
+        //     where: {userId: res.locals.user.id},
+        //     include: [{model: db.quote}]
+        // })
+        // console.log(findUserQuotes)
+        // const deleteQuotes = await db.quote.destroy({
+        //     where: {id: [findUserQuotes.forEach(id => {
+        //         id.quoteId
+        //     })]
+        // }
+        // })
+        const deleteUserQuotes = await db.user_quotes.destroy({
             where: {userId: res.locals.user.id}
         })
-        console.log(findUserQuotes.forEach(id => {
-            id.quoteId
-        })
-    )
-    //     const deleteQuotes = await db.quote.destroy({
-    //         where: {id: [findUserQuotes.forEach(id => {
-    //             id.quoteId
-    //         })]
-    //     }
-    //     })
-        const deleteUserQuotes = await db.user_quotes.destroy({
-            where: {userId: res.locals.user.id},
-            include: [{
-                model: db.quote}]
-        })
         const deleteUser = await db.user.destroy({
-                where: {email: res.locals.user.email}
+                where: {email: res.locals.user.email},
+                include: [{model: db.quote}]
             })
         
         res.redirect('/users/new')
@@ -165,11 +162,9 @@ router.put('/profile/account', async (req,res)=> {
 }
 })
 
-
-
 router.get('/profile/account', async (req,res)=> {
     if(!res.locals.user) {
-        res.redirect('/users/login?message=You must authenticate before you are authorized to view this resource.')
+        res.redirect('users/account.ejs')
         // otherwise, show them their profile
     } else {
         try {
@@ -181,7 +176,9 @@ router.get('/profile/account', async (req,res)=> {
                 password: res.locals.user.password
             }
         })
-    res.render('users/account.ejs', { user: userInfo})
+    res.render('users/account.ejs', { user: userInfo,
+        message: req.query.message ? req.query.message: null
+    })
 
     }catch(err) {
         console.log(err)
