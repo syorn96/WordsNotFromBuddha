@@ -41,7 +41,7 @@ https://aztro.readthedocs.io/en/latest/#
 | Method | URL pattern | Action | Description |
 |:------:|:-----------:|:------:|:-----------:|
 | POST   | /users | Create | Create new user |
-| GET    | /users/login | Read | Render form for users to log in|
+| GET    | /users/login | Read | Render form for users to log in |
 | POST   | /users/login | Read | Verify user login info |
 | GET    | /users/logout | Read | Log out user & user cookie id |
 | GET    | /users/new | Read | Render form for creating new User |
@@ -71,8 +71,8 @@ https://aztro.readthedocs.io/en/latest/#
 #### Intention
 | Method | URL pattern | Action | Description |
 |:------:|:-----------:|:------:|:-----------:|
-| GET    | /users/:id/intention/ | Read | Display list of saved quotes with no reflection
-| GET    | /users/:id/intention/:id | Read | Display a single quote with no reflection|
+| GET    | /users/:id/intention/ | Read | Display list of saved quotes with no reflection |
+| GET    | /users/:id/intention/:id | Read | Display a single quote with no reflection |
 
 ## Techstack
 

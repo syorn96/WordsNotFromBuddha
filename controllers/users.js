@@ -102,7 +102,6 @@ router.delete('/profile/account', async (req,res)=> {
         // otherwise, show them their profile
     } else {
         try {
-            // let userQuoteId = []
         const deleteReflection = await db.reflection.destroy({
             where: {userId: res.locals.user.id}
         })

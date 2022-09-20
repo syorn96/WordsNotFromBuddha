@@ -3,10 +3,10 @@
 justify-content: center;
 align-items: center;">
     <div class="boxy" style="text-align:right; font-size: larger;">
-        <% if (message) { %>
-            <p><%= message %></p>
-        <% } %>
         <form method="POST" action="/users/profile/account/?_method=PUT">
+            <% if (message) { %>
+                <p><%= message %></p>
+            <% } %>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" value="<%=user.username%>" required>
             <hr>
@@ -78,6 +78,8 @@ align-items: center;">
             <hr>
             <br>
             <button class="btn btn-dark" type="submit">Submit Changes</button>
+            <a class="btn btn-dark" href="/users/profile">Return to Profile</a>
+            
         </form>      
     </div>
 </div>
