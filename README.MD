@@ -38,36 +38,41 @@ https://aztro.readthedocs.io/en/latest/#
 
 #### Users
 
-| Method | Action | Description |
-|:------:|:------:|:-----------:|
-| POST   | /users | Create new user |
-| GET    | /users/new | Render form for creating new User |
-| GET    | /users/profile | Display User information & FREE horoscope |
-| PUT    | /users/profile/account | Edit User |
-| DELETE | /users/profile/account | Delete User |
+| Method | URL pattern | Action | Description |
+|:------:||:-----------:|:------:|:-----------:|
+| POST   | /users | Create | Create new user |
+| GET    | /users/login | Read | Render form for users to log in|
+| POST   | /users/login | Read | Verify user login info |
+| GET    | /users/logout | Read | Log out user & user cookie id |
+| GET    | /users/new | Read | Render form for creating new User |
+| GET    | /users/profile | Read | Display User information & FREE horoscope |
+| GET    | /users/profile/account | Read | Render form for updating user information |
+| PUT    | /users/profile/account | Update | Edit/update User information |
+| DELETE | /users/profile/account | Delete | Delete User from DB |
 
 #### Meditate
-| Method | Action | Description |
-|:------:|:------:|:-----------:|
-| GET    | /users/:id/meditate | Show 50 random quotes |
-| POST   | /users/:id/meditate | Add quotes to user's reflect page |
+| Method | URL pattern | Action | Description |
+|:------:|:------:|:------:|:-----------:|
+| GET    | /users/:id/meditate | Read | Show 50 random quotes |
+| POST   | /users/:id/meditate | Create | Add quote(s) to user's reflect page |
 
 #### Reflect
-| Method | Action | Description |
-|:------:|:------:|:-----------:|
-| GET    | /users/:id/reflect | Show all quotes with reflections |
-| GET    | /users/:id/reflect/:id | Render form to create a reflection for a quote |
-| POST   | /users/:id/reflect/:id | Create a reflection for a quote |
-| GET    | /users/:id/reflect/:id | Show a single quote with reflection(s) |
-| DELETE | /users/:id/reflect | Delete quote from reflection page |
-| GET    | /users/:id/reflect/edit/:id | Show form to edit reflection |
-| PUT    | /users/:id/reflect/edit/:id | Edit reflection |
+| Method | URL pattern | Action | Description |
+|:------:|:-----------:|:------:|:-----------:|
+| GET    | /users/reflect/ | Read | Show all quotes with reflections |
+| GET    | /users/reflect/:id | Read | Render form to create a reflection for a quote |
+| POST   | /users/reflect/:id | Create | Create a reflection for a quote |
+| GET    | /users/reflect/:id | Read | Show a single quote with reflection(s) |
+| DELETE | /users/reflect/:id | Destroy | Delete quote from reflection page |
+| GET    | /users/reflect/edit/:id | Read | Show form to edit reflection |
+| PUT    | /users/reflect/edit/:id | Update | Edit reflection |
+| DELETE | /users/reflect/edit/:id | Destroy | Delete single reflection from a quote |
 
 #### Intention
-| Method | Action | Description |
-|:------:|:------:|:-----------:|
-| GET    | /users/:id/intention/ | Display list of saved quotes with no reflection
-| GET    | /users/:id/intention/:id | Display a single quote with no reflection|
+| Method | URL pattern | Action | Description |
+|:------:|:-----------:|:------:|:-----------:|
+| GET    | /users/:id/intention/ | Read | Display list of saved quotes with no reflection
+| GET    | /users/:id/intention/:id | Read | Display a single quote with no reflection|
 
 ## Techstack
 
@@ -111,11 +116,14 @@ https://aztro.readthedocs.io/en/latest/#
 * Functioning forms to delete or add quotes to reflect page.
 
 ## Stretchgoals
-* Add and display username
-* Allow uses to edit their profile (username, email, password, birthday)
 * Add second API (horoscopes)
-* Add a toggle button to change website theme
+* Add and display username + horoscope
+* Allow users to edit their profile (username, email, password, birthday)
+* Add a toggle button to change website theme (Yin/Yang)
+* Delete all saved information when a user is deleted
+* Make app mobile-friendly
 
 ## Potential Roadblocks
 * Associating mutliple models
 * CSS
+* Converting app tobe mobile-friendly
