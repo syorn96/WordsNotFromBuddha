@@ -39,7 +39,7 @@ https://aztro.readthedocs.io/en/latest/#
 #### Users
 
 | Method | URL pattern | Action | Description |
-|:------:||:-----------:|:------:|:-----------:|
+|:------:|:-----------:|:------:|:-----------:|
 | POST   | /users | Create | Create new user |
 | GET    | /users/login | Read | Render form for users to log in|
 | POST   | /users/login | Read | Verify user login info |
