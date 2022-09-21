@@ -1,6 +1,6 @@
 # Words Not From Buddha
 
-## Link to App
+## Link to Web Application
 
 https://wordsnotfrombuddha-syorn96.koyeb.app/
 
@@ -142,3 +142,8 @@ https://aztro.readthedocs.io/en/latest/#
 * Associating mutliple models
 * CSS
 * Converting app tobe mobile-friendly
+
+## Post Project Reflection
+* I learned to appreciate asking for help when I really got stumped, but to also take a step back and prioritize my time-wisely. Once I took a step back, I was able to revisit my issue with a refreshed mindset. 
+* I also learned that I really enjoy creating and sharing things that I’m passionate about, so if I were ever to make my own start-up - I would want it to be an idea or company that I can truly stand by.
+* I had to revisit some methods that I haven't used for a couple of weeks and tweak it to my application needs.
