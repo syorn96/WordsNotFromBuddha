@@ -24,18 +24,17 @@ WNFB will allow users to:
 1. Fork or clone down this repo
 2. Open repo terminal and run ```touch .gitignore echo >> node_modules ```
 3. Run ```touch .env ```
-4. In .env create a variable ENC_KEY 
-5. EXAMPLE: ```ENC_SECRET=< your secret code >```
+4. In .env create a variable "ENC_KEY" and create a secret key.
+5. EXAMPLE: ```ENC_SECRET=<your secret code>```
 6. Run ``` npm init ```
 7. Install dependencies. 
-8. Run ``` npm install nodemon axios postgresql sequelize ExpressBcrypt Cookie-Parser Crypto-JS Dotenv EJS Express-EJS-Layouts Method-Override ```
-9. Run ```createdb words-not-from-buddha```
-10. Run ```sequelize db:create```
-11. Run ```sequelize db:migrate```
-12. Run ```nodemon``` in the terminal
-13. Open http://localhost:3000/ in your browser.
-14. Create a new account to access the application and your FREE horoscope!
-15. Have fun "Zenning-Out!"
+8. Run ``` npm install nodemon axios sequelize pg express bcrypt cookie-parser crypto-js dotenv ejs express-ejs-layouts method-override ```
+9. Run ```sequelize db:create```
+10. Run ```sequelize db:migrate```
+11. Run ```nodemon``` in the terminal
+12. Open http://localhost:3000/ in your browser.
+13. Create a new account to access the application and your FREE horoscope!
+14. Have fun "Zenning-Out!"
 
 
 
@@ -150,5 +149,5 @@ https://aztro.readthedocs.io/en/latest/#
 
 ## Post Project Reflection
 * I learned to appreciate asking for help when I really got stumped, but to also take a step back and prioritize my time-wisely. Once I took a step back, I was able to revisit my issue with a refreshed mindset. 
-* I also learned that I really enjoy creating and sharing things that I’m passionate about, so if I were ever to make my own start-up - I would want it to be an idea or company that I can truly stand by.
-* I had to revisit some methods that I haven't used for a couple of weeks and tweak it to my application needs.
+* I also learned that I really enjoy creating and sharing things that I’m passionate about, so if I were ever to create my own start-up - I would want it to be an idea or company that I can truly stand by.
+* I had to revisit some coding methods that I haven't used for a couple of weeks and tweak it to my application needs.
