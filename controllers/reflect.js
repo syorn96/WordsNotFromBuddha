@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const db = require('../models')
 
+// GET /users/reflect -- render saved quotes/reflections based on verified user
 router.get('/', async (req,res)=> {
     try{
         const user = await db.user.findOne({
@@ -24,6 +25,7 @@ router.get('/', async (req,res)=> {
     }
 })
 
+// DELETE /users/reflect/:id -- if user deletes a quote, delete reflections along with it
 router.delete('/:id', async (req,res)=> {
     try{
         const user = await db.user.findOne({
@@ -47,6 +49,7 @@ router.delete('/:id', async (req,res)=> {
     }
 })
 
+// PUT /users/reflect/edit/:id -- update single reflection in reflection table
 router.put('/edit/:id', async (req,res) => {
     console.log(req.body)
     try {
@@ -61,6 +64,7 @@ router.put('/edit/:id', async (req,res) => {
     }
 })
 
+// DELETE /users/reflect/edit/:id -- delete single reflection in reflection table
 router.delete('/edit/:id', async (req,res)=> {
     try{
         const deleteReflection = await db.reflection.destroy({
@@ -72,7 +76,7 @@ router.delete('/edit/:id', async (req,res)=> {
     }
 })
 
-
+// GET /users/reflect/:id 
 router.get('/:id', async (req,res)=> {
     console.log(req.params.id)
     try{

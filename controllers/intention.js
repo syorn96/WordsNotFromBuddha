@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const db = require('../models')
 
+// GET /users/intention -- render all saved quotes w/o author & reflection
 router.get('/', async (req,res)=> {
     try{
         const user = await db.user.findOne({
@@ -16,7 +17,7 @@ router.get('/', async (req,res)=> {
         console.log(err)
     }
 })
-
+// GET /users/intention/:id -- render single quote on virtual vision board
 router.get('/:id', async (req,res)=> {
     try{
         const oneQuote = await db.quote.findOne({
