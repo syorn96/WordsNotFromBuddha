@@ -76,7 +76,7 @@ router.delete('/edit/:id', async (req,res)=> {
     }
 })
 
-// GET /users/reflect/:id 
+// GET /users/reflect/:id -- display all quotes and reflections pertaining to user
 router.get('/:id', async (req,res)=> {
     console.log(req.params.id)
     try{
@@ -108,6 +108,7 @@ router.get('/:id', async (req,res)=> {
     }
 })
 
+// POST /users/reflect/:id -- create a new reflection for specific quote
 router.post('/:id', async (req,res)=>{
     try{
         const createReflection = await db.reflection.create({
@@ -121,6 +122,7 @@ router.post('/:id', async (req,res)=>{
     }
 })
 
+// GET /users/reflect/edit/:id -- render form to edit specific reflection // display quote that pertains to that reflection
 router.get('/edit/:id', async (req,res) => {
     try{
         const reflection = await db.reflection.findOne({
