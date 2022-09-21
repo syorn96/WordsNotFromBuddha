@@ -1,3 +1,4 @@
+// on meditate URL if user scrolls past 20, display two buttons (scroll to top, or go to reflect page)
 function scrollFunction() {
 let myButton = document.getElementById("top-Btn");
 let reflectButton = document.getElementById("reflect-Btn");
