@@ -14,6 +14,7 @@ buttons.forEach(e => {
     })
 })
 
+// YIN AND YANG THEME OPTIONS (ON CLICK)
 yangBtn.addEventListener('click', ()=> {
     headerImage.setAttribute('src','/public/media/WNFB.png')
     body.setAttribute('style','background-image: url("https://cdn.pixabay.com/photo/2017/12/31/15/39/marine-3052592_960_720.jpg"); color:black;')
