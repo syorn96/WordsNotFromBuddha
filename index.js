@@ -40,7 +40,6 @@ app.use(async (req, res, next)=> {
     // if there is no cookie -- set the user to be null in the res.locals
     res.locals.user = null 
     }
-
     // move on to the next route or middleware in the chain
     next()
 }) 
@@ -53,9 +52,12 @@ app.get('/', (req,res) => {
     console.log('the currently logged in user is:', res.locals.user)
     res.render('home.ejs')
 })
+
+// about page
 app.get('/about', (req,res)=> {
     res.render('about.ejs')
 })
+
 // controllers
 app.use('/users/intention', require('./controllers/intention'))
 app.use('/users', require('./controllers/users'))
