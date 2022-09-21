@@ -27,6 +27,6 @@ yinBtn.addEventListener('click', ()=> {
     headerImage.setAttribute('src','/public/media/WNFB2(white).png')
     body.setAttribute('style','background-image: url("https://cdn.pixabay.com/photo/2014/06/24/17/38/smoke-376543_960_720.jpg"); color: white;')
     boxy.forEach(e=> {
-        e.setAttribute('style','background-color: rgba(0, 0, 0, 0.485);')
+        e.setAttribute('style','background-color: rgba(55, 55, 55, 0.485);')
     })
 })

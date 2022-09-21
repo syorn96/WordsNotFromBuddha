@@ -5,7 +5,6 @@ const crypto = require('crypto-js')
 const bcrypt = require('bcrypt')
 const axios = require('axios')
 const determineSign = require('../public/script')
-const { response } = require('express')
 let sign = null
 const noLoginMessage = 'Incorrect username or password'
 // GET /users/new -- render a form to create a new user
