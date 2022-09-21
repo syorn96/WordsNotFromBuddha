@@ -14,9 +14,10 @@ buttons.forEach(e => {
     })
 })
 
+// YIN AND YANG THEME OPTIONS (ON CLICK)
 yangBtn.addEventListener('click', ()=> {
     headerImage.setAttribute('src','/public/media/WNFB.png')
-    body.setAttribute('style','background-image: url("https://cdn.pixabay.com/photo/2018/09/03/23/56/sea-3652697_960_720.jpg"); color:black;')
+    body.setAttribute('style','background-image: url("https://cdn.pixabay.com/photo/2017/12/31/15/39/marine-3052592_960_720.jpg"); color:black;')
     boxy.forEach(e=> {
         e.setAttribute('style','background-color: rgba(255, 255, 255, 0.485);')
     })

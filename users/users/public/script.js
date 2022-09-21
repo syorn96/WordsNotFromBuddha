@@ -1,3 +1,4 @@
+// determine user horoscope sign based on supplied birth month and birth day
 module.exports = function determineSign(month, day) {
     if (month == 3 && day >= 21 || month == 4 && day <= 19) {
         sign = 'Aries'
