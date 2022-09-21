@@ -21,13 +21,15 @@ WNFB will allow users to:
 
 ## Live Installation
 
-* Fork and clone down this repo
-* Open repo terminal and install dependencies. 
+* Fork or clone down this repo
+* Open repo terminal and run ``` npm init ```
+* Install dependencies. 
 * Run ``` npm install nodemon axios postgresql sequelize ExpressBcrypt Cookie-Parser Crypto-JS Dotenv EJS Express-EJS-Layouts Method-Override ```
 * Run ```sequelize db:create```
 * Run ```sequelize db:migrate```
 * Run ```nodemon``` in the terminal
 * Open http://localhost:3000/ in your browser.
+* Create a new account to access the application and your FREE horoscope!
 * Have fun "Zenning-Out!"
 
 
