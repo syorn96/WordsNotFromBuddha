@@ -6,17 +6,17 @@
   <form action="/users" method="POST">
     <div>
       <label for="username">Username:</label>
-      <input id="username" type="username" name="username" required>
+      <input class="border-dark" id="username" type="username" name="username" required>
 
       <label for="email">Email:</label>
-      <input id="email" type="email" name="email" required>
+      <input class="border-dark" id="email" type="email" name="email" required>
 
       <label for="password">Password:</label>
-      <input id="password" type="password" name="password" required>
+      <input class="border-dark" id="password" type="password" name="password" required>
     </div>
     <div style="margin-top:5vh">
       <label for="birthMonth">Birth Month</label>
-      <select id="birthMonth" name="month" required>
+      <select class="border-dark" id="birthMonth" name="month" required>
         <option value="1">January</option>
         <option value="2">February</option>
         <option value="3">March</option>
@@ -32,7 +32,7 @@
       </select>
 
       <label for="birthDay">Birth Day</label>
-      <select id="birthDay" name="day" required>
+      <select class="border-dark" id="birthDay" name="day" required>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -68,6 +68,7 @@
       <br>
       <br>
       <button class="btn btn-dark" type="submit">Sign Up</button>
+      <a class="btn btn-dark" href="/users/login">Already have an account? Log in!</a>
     </div>
   </form>
 </div>
