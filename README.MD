@@ -21,21 +21,21 @@ WNFB will allow users to:
 
 ## Live Installation
 
-* Fork or clone down this repo
-* Open repo terminal and run ```touch .gitignore echo >>> node_modules ```
-* ```touch .env ```
-* In .env create a variable ENC_KEY 
-* EXAMPLE: ```ENC_SECRET=< your secret code >```
-* Run ``` npm init ```
-* Install dependencies. 
-* Run ``` npm install nodemon axios postgresql sequelize ExpressBcrypt Cookie-Parser Crypto-JS Dotenv EJS Express-EJS-Layouts Method-Override ```
-* Run ```createdb words-not-from-buddha```
-* Run ```sequelize db:create```
-* Run ```sequelize db:migrate```
-* Run ```nodemon``` in the terminal
-* Open http://localhost:3000/ in your browser.
-* Create a new account to access the application and your FREE horoscope!
-* Have fun "Zenning-Out!"
+1. Fork or clone down this repo
+2. Open repo terminal and run ```touch .gitignore echo >> node_modules ```
+3. Run ```touch .env ```
+4. In .env create a variable ENC_KEY 
+5. EXAMPLE: ```ENC_SECRET=< your secret code >```
+6. Run ``` npm init ```
+7. Install dependencies. 
+8. Run ``` npm install nodemon axios postgresql sequelize ExpressBcrypt Cookie-Parser Crypto-JS Dotenv EJS Express-EJS-Layouts Method-Override ```
+9. Run ```createdb words-not-from-buddha```
+10. Run ```sequelize db:create```
+11. Run ```sequelize db:migrate```
+12. Run ```nodemon``` in the terminal
+13. Open http://localhost:3000/ in your browser.
+14. Create a new account to access the application and your FREE horoscope!
+15. Have fun "Zenning-Out!"
 
 
 
