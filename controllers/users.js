@@ -96,6 +96,7 @@ router.get('/logout', (req,res)=> {
     res.redirect('/')
 })
 
+// DELETE /users/profile/account -- delete user and all saved info(quote, reflections) pertaining to that user
 router.delete('/profile/account', async (req,res)=> {
     if(!res.locals.user) {
         res.redirect('/users/login?message=You must authenticate before you are authorized to view this resource.')
@@ -105,17 +106,19 @@ router.delete('/profile/account', async (req,res)=> {
         const deleteReflection = await db.reflection.destroy({
             where: {userId: res.locals.user.id}
         })
+        // finds all user_quotes with user id
         const findUserQuotes = await db.user_quotes.findAll({
             where: {userId: res.locals.user.id}
         })
+        // creates a new array of only quoteId's
         userQuoteIdArray = findUserQuotes.map(element=> {
             newArray = parseInt(element.quoteId, 10)
             return newArray
         })
-        console.log(userQuoteIdArray)
+        // console.log(userQuoteIdArray)
+        // Delete quotes with quoteIdArray
         const deleteQuotes = await db.quote.destroy({
-            where: {id: userQuoteIdArray}
-        
+            where: {id: userQuoteIdArray}  
         })
         const deleteUserQuotes = await db.user_quotes.destroy({
             where: {userId: res.locals.user.id}
@@ -124,15 +127,14 @@ router.delete('/profile/account', async (req,res)=> {
                 where: {email: res.locals.user.email},
                 include: [{model: db.quote}]
             })
-        
         res.redirect('/users/new')
-
     }catch(err) {
         console.log(err)
     }
 }
 })
 
+// PUT /users/profile/account -- update user info in user DB
 router.put('/profile/account', async (req,res)=> {
     const user = await db.user.findOne({
         where: {email: res.locals.user.email}
@@ -143,7 +145,7 @@ router.put('/profile/account', async (req,res)=> {
     } else if(!bcrypt.compareSync(req.body.password, user.password)) {
         console.log('wrong password')
         res.redirect('/users/profile/account/?message=' + noLoginMessage)
-    // if the user is found and the supplied password matches what is in DB, -- log them in
+    // if the user is found and the supplied password matches what is in DB, -- allow user to update information
     } else {
         try {
         const hashedPassword = bcrypt.hashSync(req.body.newPassword, 12)
@@ -156,13 +158,13 @@ router.put('/profile/account', async (req,res)=> {
                 where: {id: res.locals.user.id}
             })
     res.redirect('/users/profile')
-
     }catch(err) {
         console.log(err)
     }
 }
 })
 
+// GET /users/profile/account -- display user information
 router.get('/profile/account', async (req,res)=> {
     if(!res.locals.user) {
         res.redirect('users/account.ejs')
@@ -187,7 +189,7 @@ router.get('/profile/account', async (req,res)=> {
 }
 })
 
-
+// GET /users/profile -- display profile URL, and user FREE horoscope
 router.get('/profile', async (req,res)=> {
     // if the user is not logged ... we need to redirect to the login form
     if(!res.locals.user) {
