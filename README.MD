@@ -22,9 +22,14 @@ WNFB will allow users to:
 ## Live Installation
 
 * Fork or clone down this repo
-* Open repo terminal and run ``` npm init ```
+* Open repo terminal and run ```touch .gitignore echo >>> node_modules ```
+* ```touch .env ```
+* In .env create a variable ENC_KEY 
+* EXAMPLE: ```ENC_SECRET=< your secret code >```
+* Run ``` npm init ```
 * Install dependencies. 
 * Run ``` npm install nodemon axios postgresql sequelize ExpressBcrypt Cookie-Parser Crypto-JS Dotenv EJS Express-EJS-Layouts Method-Override ```
+* Run ```createdb words-not-from-buddha```
 * Run ```sequelize db:create```
 * Run ```sequelize db:migrate```
 * Run ```nodemon``` in the terminal
