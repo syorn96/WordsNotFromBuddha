@@ -93,23 +93,33 @@ https://aztro.readthedocs.io/en/latest/#
 | GET    | /users/:id/intention/ | Read | Display list of saved quotes with no reflection |
 | GET    | /users/:id/intention/:id | Read | Display a single quote with no reflection |
 
+## Approach Taken
+
+When creating this application, I kept asking myself the question "what would a user appreciate in an application like this?"
+
+This allowed me to have a birds-eyed view and incorporate features that would add to the user's experience.
+
+I used all the node module packages that we learned in Unit 2 (at General Assembly) and some "onclick" functions that I incorporated in first project "Lucky Duck".
+
+I also wanted this application to be personal to the user and remind them that sometimes it's healthy to dedicated self-reflection time solely for yourself.
+
 ## Techstack
 
-* Javascript
-* CSS
-* HTML
-* Node
-* Axios
-* Postgresql
-* Sequelize
-* Express
-* Bcrypt
-* Cookie-Parser
-* Crypto-JS
-* Dotenv
-* EJS
-* Express-EJS-Layouts
-* Method-Override
+* Javascript (Coding language used)
+* CSS (Styling)
+* HTML (Webpage)
+* Node (Download other Node Module Packages)
+* Axios (Grab data from API)
+* Postgresql (Tool for database)
+* Sequelize (Object Relational Mapper)
+* Express (route controllers)
+* Bcrypt (encrypt user password)
+* Cookie-Parser (used to encrypt cookie id)
+* Crypto-JS (encrypt user/cookie id on webpage)
+* Dotenv (Create secret key)
+* EJS (Embedded javascript templates)
+* Express-EJS-Layouts (Partial and webpage layouts)
+* Method-Override (PUT and DELETE methods)
 
 
 ## Wireframes
@@ -151,3 +161,4 @@ https://aztro.readthedocs.io/en/latest/#
 * I learned to appreciate asking for help when I really got stumped, but to also take a step back and prioritize my time-wisely. Once I took a step back, I was able to revisit my issue with a refreshed mindset. 
 * I also learned that I really enjoy creating and sharing things that I’m passionate about, so if I were ever to create my own start-up - I would want it to be an idea or company that I can truly stand by.
 * I had to revisit some coding methods that I haven't used for a couple of weeks and tweak it to my application needs.
+* I will have to revisit making this application mobile friendly using media queries.
