@@ -98,11 +98,11 @@ https://aztro.readthedocs.io/en/latest/#
 
 When creating this application, I kept asking myself the question "what would a user appreciate in an application like this?"
 
-This allowed me to have a birds-eyed view and incorporate features that would add to the user's experience.
+This allowed me to have a birds-eyed view and incorporate features that would add to the user's experience. Ex: (User account settings and the ability to delete data that's saved in the local databases)
 
-I used all the node module packages that we learned in Unit 2 (at General Assembly) and some "onclick" functions that I incorporated in first project "Lucky Duck".
+I used all the node module packages that we learned in Unit 2 (at General Assembly) and some "onclick" functions that I incorporated in my first project "Lucky Duck".
 
-I also wanted this application to be personal to the user and remind them that sometimes it's healthy to dedicated self-reflection time solely for yourself.
+I also wanted this application to be personal to the user and remind them that sometimes it's healthy to dedicate self-reflection time.
 
 ## Techstack
 
